@@ -1,7 +1,8 @@
 #
-# spec file for package yast2-theme
+# spec file for package yast2-branding-SLE
 #
 # Copyright (c) 2017 SUSE LINUX GmbH, Nuernberg, Germany.
+# Copyright (c) 2019 Stasiek Michalski <hellcp@opensuse.org>.
 #
 # All modifications and additions to the file contributed by third parties
 # remain the property of their copyright owners, unless otherwise agreed
@@ -12,7 +13,7 @@
 # license that conforms to the Open Source Definition (Version 1.9)
 # published by the Open Source Initiative.
 
-# Please submit bugfixes or comments via http://bugs.opensuse.org/
+# Please submit bugfixes or comments via https://bugs.opensuse.org/
 #
 
 Name:           yast2-branding-SLE
@@ -21,7 +22,7 @@ Release:        0
 Summary:        YaST2 - Theme
 License:        GPL-2.0-only
 Group:          System/YaST
-Url:            http://github.com/yast/yast-theme
+Url:            https://github.com/yast/yast-branding-SLE
 
 Source0:        %{name}-%{version}.tar.bz2
 
@@ -69,7 +70,7 @@ SLE branding for YaST2 Qt, mainly used for installation
 %{yast_install}
 
 mkdir -p %{buildroot}/etc/icewm/
-cp theme/SLE/wmconfig/* %{buildroot}/etc/icewm/
+cp theme/current/wmconfig/* %{buildroot}/etc/icewm/
 
 # Clean out duplicates
 %fdupes %{buildroot}%{yast_themedir}
